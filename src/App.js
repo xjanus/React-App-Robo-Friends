@@ -5,7 +5,7 @@ import {robots} from './robots';
 
 class App extends Component {
     
-    constructor(){
+    constructor() {
         super();
         this.state = {
             robots: robots,
@@ -18,9 +18,10 @@ class App extends Component {
     }
 
     render() {
-        
-        const filteredRobots = this.state.robots.filter(robots => {
-            return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+
+        //filteredRobots array has only those robot objects whose name matches the search field state 
+        const filteredRobots = this.state.robots.filter(robot => {
+            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         });
 
         return (
