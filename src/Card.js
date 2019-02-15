@@ -3,7 +3,7 @@ import React from 'react';
 const card = () => {
     return (
         <div>
-            <img src=''></img>
+            <img alt='robots' src=''></img>
             <div>
                 <h2>Name</h2>
                 <p>name@email.com</p>
