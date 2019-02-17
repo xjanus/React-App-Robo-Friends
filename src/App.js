@@ -19,7 +19,10 @@ class App extends Component {
 
     render() {
 
-        //filteredRobots array has only those robot objects whose name matches the search field state 
+        //filteredRobots array has only those robot objects whose name matches the search 
+        //field state.
+        //The filter() method creates a new array with all elements that pass the test implemented 
+        //by the provided function. 
         const filteredRobots = this.state.robots.filter(robot => {
             return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         });
