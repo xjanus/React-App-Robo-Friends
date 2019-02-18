@@ -4,6 +4,7 @@ const card = ({name, email, id}) => {
     //destructuring
     // const {name, email, id} = props;
     return (
+        
         <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
             <img alt='robots' src={`https://robohash.org/${id}?200x200`}></img>
             <div>
@@ -11,6 +12,7 @@ const card = ({name, email, id}) => {
                 <p>{email}</p>
             </div>
         </div>
+        
     );
 }
 
