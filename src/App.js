@@ -18,6 +18,9 @@ class App extends Component {
     }
 
     componentDidMount(){
+        //fetch is part of the window object and 
+        //fetch comes with all the browsers now
+        //fetch allows us to send requests to the server
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
         .then(users => this.setState({robots: users}));        
@@ -33,17 +36,21 @@ class App extends Component {
             return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         });
 
-        return (
-            <div className='tc'>
-                
-                <h1 className='f1'>RoboFriends</h1>
-                
-                <SearchBox searchfield={this.state.searchfield} searchChange={this.onSearchChange} />
-                
-                <CardList robots={filteredRobots} />
+        if(this.state.robots.length === 0) {
+            return <h1>Loading</h1>
+        } else {
+            return (
+                <div className='tc'>
+                    
+                    <h1 className='f1'>RoboFriends</h1>
+                    
+                    <SearchBox searchfield={this.state.searchfield} searchChange={this.onSearchChange} />
+                    
+                    <CardList robots={filteredRobots} />
 
-            </div>        
-        );
+                </div>        
+            );
+        }
     }   
 }
 
