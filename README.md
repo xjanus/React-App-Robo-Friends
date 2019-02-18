@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # RoboFriends React App
 
-A simple authentication application using Authentication Routes, Middleware, Dababase and Passport (Auth) packages without any CSS styling. 
+A simple React App which fetches array of random cards of bot users and has real-time search filtering. 
 
 ## Getting Started and Execution
 
